@@ -1,0 +1,54 @@
+// Definindo algumas variáveis de cores
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$light-color: #fff;
+$dark-color: #343a40;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: $dark-color;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: $light-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+}
+
+button {
+  background-color: $primary-color;
+  color: $light-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+body {
+    background-image: url('/assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; // Faz com que o background cubra a altura total da viewport
+  }
+  
+// Adicione mais estilos conforme necessário
+
+

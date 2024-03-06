@@ -1,0 +1,14 @@
+<img src="/src/assets/img/luffy.jpg" alt="">
+
+<div>
+    <input type="text" [(ngModel)]="cep" (blur)="buscarCep()" placeholder="Digite o CEP">
+    <button (click)="buscarCep()">Buscar</button>
+  </div>
+  <div *ngIf="endereco">
+    <p>Logradouro: {{ endereco.logradouro }}</p>
+    <p>Bairro: {{ endereco.bairro }}</p>
+    <p>Cidade: {{ endereco.localidade }}</p>
+    <p>UF: {{ endereco.uf }}</p>
+  </div>
+  
+  

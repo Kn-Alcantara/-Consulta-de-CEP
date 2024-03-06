@@ -1,0 +1,109 @@
+$font-primary: 'Segoe UI', 'Roboto', sans-serif; // Uma fonte comum em interfaces
+$color-dark: rgba(36, 41, 46, 0.9); // Escuro com transparência
+$color-light: #FFFFFF;
+$color-accent: #58A6FF; // Cor para acentuações e botões
+$color-input-bg: rgba(255, 255, 255, 0.2); // Fundo de entrada com transparência
+$border-radius: 8px; // Borda arredondada
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+$border-radius: 8px;
+$shadow-color: rgba(0, 0, 0, 0.2);
+$card-padding: 20px;
+$card-bg: #ffffff;
+$text-color: #333333;
+$link-color: #007bff;
+$img-height: 200px;
+$wood-color-light: #d2b48c; // Tan (claro)
+$wood-color-medium: #deb887; // BurlyWood (médio)
+$wood-color-dark: #8b4513; // SaddleBrown (escuro)
+$wood-color-red: #a0522d; // Sienna (avermelhado)
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  background: url('../assets/merry.png') no-repeat center center fixed; // Caminho para a sua imagem de fundo
+  background-size: cover;
+  position: static;
+}
+html {
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+// Painel de Login
+.card {
+  border: 9px ridge darken($wood-color-medium, 10%);
+  border-radius: $border-radius;
+  box-shadow: 0 10px 10px $shadow-color;
+  background-color: $card-bg;
+  margin: 20px;
+  overflow: hidden;
+
+  // Para alinhar o painel ao centro vertical e horizontalmente
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  // Título da tela de login
+  h1 {
+   
+    color: $color-light;
+    margin-bottom: 30px;
+  }
+
+  // Campo de entrada estilizado
+  input {
+    background: $color-input-bg;
+    border:3px ridge;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: calc(100% - 30px); // Desconta o padding
+    border-radius: $border-radius;
+    color: black;
+    max-width: 300px;
+    // Remove estilos de foco padrão do navegador e adiciona um personalizado
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px $color-accent;
+    }
+  }
+
+  // Botão de login estilizado
+  button {
+    background:$wood-color-light ;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    color: $color-light;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Efeito de hover
+    &:hover {
+      background-color: darken($color-accent, 10%);
+    }
+  }
+
+  // Ícones com estilo
+  .icon {
+    position: relative; // Para alinhamento dos ícones
+    margin-right: 10px;
+
+    // Ícones antes dos inputs
+    &:before {
+      content: '\f007'; // Código do ícone do usuário (exemplo com FontAwesome)
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-light;
+    }
+  }
+}
